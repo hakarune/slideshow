@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='UTF-8'/>
+		<!--[if lt IE 9]>
+			<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		 <meta name="viewport" content="width=device-width, user-scalable=false;">
+		<link href='styles.css' rel='stylesheet' />
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.0.2.js"></script>
+	</head>
+	<body>
+        <div id="wrapper">
+            <div id="sliderWhole">
+                <div id="slideShow">
+                    <div class="slideContainer show">
+                        <img src="fracking_from_space.jpg" />
+                    </div>
+                    <div class="slideContainer">
+                        <img src="Space-Earth-Moon-Stars-And-Nebula-Glow.jpg" />
+                    </div>
+                    <div class="slideContainer">
+                        <img src="Galaxia-y-Espacio-Exterior.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<script>
+			 $(document).ready(function() {
+                 ////Slider////
+                 slideShow();
+                });
+                
+                function slideShow() {
+                  var current = $('#slideShow div.show');
+                  var next = current.next().length ? current.next() : current.siblings().first();
+                
+                  current.fadeOut('slow').removeClass('show');
+                  next.fadeIn('slow').addClass('show');
+                  
+                  setTimeout(slideShow, 3000);
+            }
+
+		</script>
+
+	</body>
+</html>

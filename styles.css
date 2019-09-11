@@ -1,0 +1,28 @@
+body {
+	margin:0px;
+	padding:0px;
+	font:normal 15px Times, serif;
+    width:100%;
+    height:100vh;
+    background:#000;
+}
+
+#wrapper{ 
+    width:100%;
+	height:100%;
+    margin: auto;
+    background:#000; 
+    -webkit-box-shadow: inset 0px 0px 10px 5px rgba(33, 33, 33, .8);
+    box-shadow: inset 0px 0px 10px 5px rgba(33, 33, 33, .8);
+}
+
+.slideContainer img { width:100%; height:100%;}
+
+#sliderWhole {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin:0 auto;
+}
+
+#slideContainer {position:absolute;}
